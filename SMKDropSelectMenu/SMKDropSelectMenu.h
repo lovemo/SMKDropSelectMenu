@@ -35,6 +35,10 @@
  */
 @property (nonatomic) NSMutableArray *menuDataArray;
 /**
+ *  第一个按钮是否是重置功能按钮
+ */
+@property (nonatomic, assign) BOOL  isFirstResetButton;
+/**
  *  选中内容回调block
  */
 @property (nonatomic) void (^handleSelectDataBlock) (NSString *selectTitle, NSUInteger selectIndex ,NSUInteger selectButtonTag);
@@ -44,8 +48,14 @@
 @property (nonatomic) void (^handleSelectButtonBlock) (NSUInteger selectIndex);
 
 
+/**
+ *  实例化
+ */
 + (instancetype)dropSelectMenu;
 
+/**
+ *  重置
+ */
 - (void)resetAction;
 
 @end

@@ -13,8 +13,8 @@
 #define KMaskBackGroundViewColor  [UIColor colorWithRed:40/255 green:40/255 blue:40/255 alpha:0.1]
 #define Kscreen_width  [UIScreen mainScreen].bounds.size.width
 #define Kscreen_height [UIScreen mainScreen].bounds.size.height
-#define KTitleButtonHeight 40
-#define KCellHeight 40
+#define KTitleButtonHeight 42
+#define KCellHeight 42
 #define KTitleButtonTag 1000
 
 #define SMKOBJCSetObject(object,value)  objc_setAssociatedObject(object,@"title" , value, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -196,6 +196,10 @@
     
     if (self.handleSelectButtonBlock) {
         self.handleSelectButtonBlock(index);
+    }
+    
+    if (self.isFirstResetButton &&  index == 0) {
+        return;
     }
     
     for (UIButton *button in self.buttonArray) {
