@@ -57,7 +57,7 @@
         
         self.isShowFirstButtonImage = YES;
         self.selfOriginalHeight = (frame.size.height <= 0 ? 40 : self.selfOriginalHeight);
-        self.dropMenuMaxHeight = KCellHeight * 4.5 + 20;
+        self.dropMenuMaxHeight = KCellHeight * 5 + 20;
         [self addSubview:self.maskBackGroundView];
         [self setupUI];
 
