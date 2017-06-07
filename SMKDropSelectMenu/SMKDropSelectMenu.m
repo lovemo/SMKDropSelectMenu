@@ -139,7 +139,10 @@
     if (self.tempButton != nil) {
         index =  self.tempButton.tag - KTitleButtonTag;
     }
-    NSInteger count = [self.menuDataArray[index] count];
+    NSInteger count = 0;
+    if (self.menuDataArray.count > 0) {
+        count = [self.menuDataArray[index] count];
+    }
     return count;
 }
 
